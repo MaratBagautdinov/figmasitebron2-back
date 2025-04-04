@@ -2,7 +2,7 @@
   "name": "equipment-rental-server",
   "version": "1.0.0",
   "description": "Backend для системы аренды оборудования",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
