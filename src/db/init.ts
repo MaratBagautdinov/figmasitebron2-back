@@ -11,7 +11,7 @@ if (!fs.existsSync(dbDir)) {
 
 const dbPath = path.join(dbDir, 'equipment_rental.db');
 const db = new sqlite3.Database(dbPath);
-
+console.log(db)
 // Create tables
 export const initializeDatabase = () => {
   return new Promise<void>((resolve, reject) => {
@@ -38,7 +38,7 @@ export const initializeDatabase = () => {
           console.error('Error hashing password:', err);
           return;
         }
-        
+
         db.run(`
           INSERT OR IGNORE INTO users (email, password, firstName, lastName, is_confirmed, role)
           VALUES (?, ?, ?, ?, ?, ?)
